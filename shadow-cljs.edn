@@ -1,0 +1,17 @@
+;; shadow-cljs configuration
+{:source-paths
+ ["src/dev"
+  "src/main"
+  "src/test"]
+
+ :dependencies
+ []
+
+ :nrepl
+ {:port 3333}
+
+ :builds
+ {:condiments {:target :node-script
+               :main core/main
+               :output-to "build/condiments.js"
+               :devtools {:after-load core/start}}}}
